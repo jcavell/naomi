@@ -1,0 +1,9 @@
+<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+  <div class="col-md-6 px-0">
+    <h1 class="display-4 font-italic">Writing - <%= @writing.title %></h1>
+  </div>
+</div>
+
+<img src = "https:<%= @writing.screenshot.image_url  %>"/>
+
+<%= raw(@writing_body) %>
