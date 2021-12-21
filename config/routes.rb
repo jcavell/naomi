@@ -4,12 +4,12 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   #
 
-  get '/writing/:writing_uri', to: 'writing#show'
-  get '/writing', to: 'writing#list'
+  get '/clinical', to: 'clinical#index'
   get '/training', to: 'training#index'
-  get '/supervision', to: 'supervision#index'
-  get '/contact', to: 'contact#index'
-  get '/therapy', to: 'therapy#index'
+  get '/writing', to: 'writing#list'
+  get '/writing/:writing_uri', to: 'writing#show'
+  get '/media', to: 'media#list'
+  get '/media/:media_uri', to: 'media#show'
   root to: 'home#index'
 end
 

@@ -4,6 +4,8 @@
   </div>
 </div>
 
-<img src = "https:<%= @writing.screenshot.image_url  %>"/>
+<% if @writing.screenshot %>
+  <img src = "https:<%= @writing.screenshot.image_url %>"/>
+<% end %>
 
 <%= raw(@writing_body) %>

@@ -22,8 +22,10 @@
             <p class="card-text mb-auto"><%= writing.description %></p>
             <%= link_to writing.link[0], writing.link[1], class: "text-dark" %>
           </div>
-          <img class="card-img-right flex-auto d-none d-md-block" src = "https:<%= writing.screenshot.image_url  %>" alt="<%= writing.screenshot.title %>">
-        </div>
+          <% if writing.screenshot %>
+           <img class="card-img-right flex-auto d-none d-md-block" src = "https:<%= writing.screenshot.image_url  %>" alt="<%= writing.screenshot.title %>">
+          <% end %>
+            </div>
       </div>
     <% end %>
   </div>
